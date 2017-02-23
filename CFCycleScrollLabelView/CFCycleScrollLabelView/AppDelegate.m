@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CFDemoMainViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [self.window makeKeyAndVisible];
+    
+  
+    
+    //将第一个视图控制器作为基栈视图控制器添加到导航视图控制器中
+    CFDemoMainViewController *rootVC = [[CFDemoMainViewController alloc] init];
+    UINavigationController *navCtr = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    
+    //将导航视图控制器作为根视图控制器
+    
+    self.window.rootViewController = navCtr;
+    
     return YES;
 }
 

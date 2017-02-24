@@ -23,7 +23,7 @@
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] initWithFrame:self.bounds];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.backgroundColor = CFRandomColor;
+        _titleLabel.backgroundColor = [UIColor whiteColor];
     }
     return _titleLabel;
 }

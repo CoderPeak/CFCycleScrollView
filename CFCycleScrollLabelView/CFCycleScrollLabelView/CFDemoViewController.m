@@ -19,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
     CFCycleScrollLabelView *cycleScrollLabelView = nil;
     if ([self.title containsString:@"一"]) {

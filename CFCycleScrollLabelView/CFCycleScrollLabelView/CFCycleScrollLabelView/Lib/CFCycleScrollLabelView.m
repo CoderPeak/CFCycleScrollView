@@ -46,8 +46,6 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
         
         [self setupMainView];
         
-//        [self nextPage];
-        
         // 添加定时器
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self addTimer];
@@ -102,7 +100,6 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
     // 马上显示回 最中间那组的数据
     NSIndexPath *currentIndexPathReset = [NSIndexPath indexPathForItem:self.currentIndexPath.item inSection:1];
     
-
     
     [self.mainView scrollToItemAtIndexPath:currentIndexPathReset atScrollPosition:UICollectionViewScrollPositionTop animated:NO];
     return currentIndexPathReset;
@@ -130,7 +127,7 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
     UICollectionView *mainView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.flowLayout];
   
     [mainView registerClass:[CFCycleScrollLabelViewCell class] forCellWithReuseIdentifier:cellIdentify];
-    mainView.backgroundColor = [UIColor blueColor];
+    mainView.backgroundColor = [UIColor whiteColor];
     mainView.pagingEnabled = YES;
     mainView.showsHorizontalScrollIndicator = NO;
     mainView.showsVerticalScrollIndicator = NO;
@@ -169,16 +166,14 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return 3;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CFCycleScrollLabelViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentify forIndexPath:indexPath];
     
-    
     cell.titleLabel.text = self.dataSourceArray[indexPath.row];
-    
     
     return cell;
 }

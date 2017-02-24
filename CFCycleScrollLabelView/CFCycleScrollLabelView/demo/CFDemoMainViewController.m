@@ -34,36 +34,64 @@
     
     
     
-    UIButton *btn0 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn0 setTitle:@"点此进入--> 一行循环轮播 >>>" forState:UIControlStateNormal];
-    [btn0 addTarget:self action:@selector(toVC0) forControlEvents:UIControlEventTouchUpInside];
-    btn0.frame = CGRectMake(0, 180, self.view.cf_width, 50);
-    [btn0 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    btn0.backgroundColor = CFRandomColor;
-    [self.view addSubview:btn0];
+    UIButton *btn00 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn00 setTitle:@"点此进入--> 竖直-一行循环轮播 >>>" forState:UIControlStateNormal];
+    [btn00 addTarget:self action:@selector(toVC00) forControlEvents:UIControlEventTouchUpInside];
+    btn00.frame = CGRectMake(0, 180, self.view.cf_width, 50);
+    [btn00 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn00.backgroundColor = CFRandomColor;
+    [self.view addSubview:btn00];
+    UIButton *btn01 = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn1 setTitle:@"点此进入--> 二行循环轮播 >>>" forState:UIControlStateNormal];
-    [btn1 addTarget:self action:@selector(toVC1) forControlEvents:UIControlEventTouchUpInside];
-    btn1.frame = CGRectMake(0, 280, self.view.cf_width, 50);
-    [btn1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    btn1.titleLabel.numberOfLines = 0;
-    btn1.backgroundColor = CFRandomColor;
-    [self.view addSubview:btn1];
+    [btn01 setTitle:@"点此进入--> 水平-一行循环轮播 >>>" forState:UIControlStateNormal];
+    [btn01 addTarget:self action:@selector(toVC01) forControlEvents:UIControlEventTouchUpInside];
+    btn01.frame = CGRectMake(0, 230, self.view.cf_width, 50);
+    [btn01 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn01.backgroundColor = CFRandomColor;
+    [self.view addSubview:btn01];
     
-
-    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn2.titleLabel.numberOfLines = 0;
-    [btn2 setTitle:@"点此进入--> 三行循环轮播 >>>" forState:UIControlStateNormal];
-    [btn2 addTarget:self action:@selector(toVC2) forControlEvents:UIControlEventTouchUpInside];
-    btn2.frame = CGRectMake(0, 380, self.view.cf_width, 50);
-    [btn2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    btn2.backgroundColor = CFRandomColor;
-    [self.view addSubview:btn2];
+    
+    UIButton *btn10 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn10 setTitle:@"点此进入--> 竖直-二行循环轮播 >>>" forState:UIControlStateNormal];
+    [btn10 addTarget:self action:@selector(toVC10) forControlEvents:UIControlEventTouchUpInside];
+    btn10.frame = CGRectMake(0, 300, self.view.cf_width, 50);
+    [btn10 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn10.titleLabel.numberOfLines = 0;
+    btn10.backgroundColor = CFRandomColor;
+    [self.view addSubview:btn10];
+    
+    UIButton *btn11 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn11 setTitle:@"点此进入--> 水平-二行循环轮播 >>>" forState:UIControlStateNormal];
+    [btn11 addTarget:self action:@selector(toVC11) forControlEvents:UIControlEventTouchUpInside];
+    btn11.frame = CGRectMake(0, 350, self.view.cf_width, 50);
+    [btn11 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn11.titleLabel.numberOfLines = 0;
+    btn11.backgroundColor = CFRandomColor;
+    [self.view addSubview:btn11];
+    
+    
+    UIButton *btn20 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn20.titleLabel.numberOfLines = 0;
+    [btn20 setTitle:@"点此进入--> 竖直-三行循环轮播 >>>" forState:UIControlStateNormal];
+    [btn20 addTarget:self action:@selector(toVC20) forControlEvents:UIControlEventTouchUpInside];
+    btn20.frame = CGRectMake(0, 420, self.view.cf_width, 50);
+    [btn20 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn20.backgroundColor = CFRandomColor;
+    [self.view addSubview:btn20];
+    
+    UIButton *btn21 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn21.titleLabel.numberOfLines = 0;
+    [btn21 setTitle:@"点此进入--> 水平-三行循环轮播 >>>" forState:UIControlStateNormal];
+    [btn21 addTarget:self action:@selector(toVC21) forControlEvents:UIControlEventTouchUpInside];
+    btn21.frame = CGRectMake(0, 470, self.view.cf_width, 50);
+    [btn21 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn21.backgroundColor = CFRandomColor;
+    [self.view addSubview:btn21];
 
 }
 
-- (void)toVC0
+
+- (void)toVC00
 {
     // 提供的数据源
     NSMutableArray *dataSource = [NSMutableArray array];
@@ -71,29 +99,69 @@
         [dataSource addObject:[NSString stringWithFormat:@"显示一行 展示demo数据---%zd", i]];
     }
     CFDemoViewController *vc = [[CFDemoViewController alloc] init];
-    vc.title = @"一行循环轮播";
+    vc.title = @"竖直-一行循环轮播";
     vc.dataSource = dataSource;
     [self.navigationController pushViewController:vc animated:YES];
 }
-- (void)toVC1
+
+- (void)toVC01
+{
+    // 提供的数据源
+    NSMutableArray *dataSource = [NSMutableArray array];
+    for (NSInteger i = 0; i < 9; i++) {
+        [dataSource addObject:[NSString stringWithFormat:@"显示一行 展示demo数据---%zd", i]];
+    }
+    CFDemoViewController *vc = [[CFDemoViewController alloc] init];
+    vc.title = @"水平-一行循环轮播";
+    vc.dataSource = dataSource;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)toVC10
 {
     NSMutableArray *dataSource = [NSMutableArray array];
     for (NSInteger i = 0; i < 9; i++) {
         [dataSource addObject:[NSString stringWithFormat:@"显示二行 展示demo数据---%zd", i]];
     }
     CFDemoViewController *vc = [[CFDemoViewController alloc] init];
-    vc.title = @"二行循环轮播";
+    vc.title = @"竖直-二行循环轮播";
     vc.dataSource = dataSource;
     [self.navigationController pushViewController:vc animated:YES];
 }
-- (void)toVC2
+
+- (void)toVC11
+{
+    NSMutableArray *dataSource = [NSMutableArray array];
+    for (NSInteger i = 0; i < 9; i++) {
+        [dataSource addObject:[NSString stringWithFormat:@"显示二行 展示demo数据---%zd", i]];
+    }
+    CFDemoViewController *vc = [[CFDemoViewController alloc] init];
+    vc.title = @"水平-二行循环轮播";
+    vc.dataSource = dataSource;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (void)toVC20
 {
     NSMutableArray *dataSource = [NSMutableArray array];
     for (NSInteger i = 0; i < 9; i++) {
         [dataSource addObject:[NSString stringWithFormat:@"显示三行 展示demo数据---%zd", i]];
     }
     CFDemoViewController *vc = [[CFDemoViewController alloc] init];
-    vc.title = @"三行循环轮播";
+    vc.title = @"竖直-三行循环轮播";
+    vc.dataSource = dataSource;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)toVC21
+{
+    NSMutableArray *dataSource = [NSMutableArray array];
+    for (NSInteger i = 0; i < 9; i++) {
+        [dataSource addObject:[NSString stringWithFormat:@"显示三行 展示demo数据---%zd", i]];
+    }
+    CFDemoViewController *vc = [[CFDemoViewController alloc] init];
+    vc.title = @"水平-三行循环轮播";
     vc.dataSource = dataSource;
     [self.navigationController pushViewController:vc animated:YES];
 }

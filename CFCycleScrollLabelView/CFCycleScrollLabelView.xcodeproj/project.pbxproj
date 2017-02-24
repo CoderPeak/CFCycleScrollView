@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8A1C248D1E600281009D890B /* CFDemoMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C24881E600281009D890B /* CFDemoMainViewController.m */; };
 		8A1C248E1E600281009D890B /* CFDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C248A1E600281009D890B /* CFDemoViewController.m */; };
-		8A1C248F1E600281009D890B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C248C1E600281009D890B /* ViewController.m */; };
 		8A911F781E5EB44F00AE85B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F771E5EB44F00AE85B8 /* main.m */; };
 		8A911F7B1E5EB44F00AE85B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F7A1E5EB44F00AE85B8 /* AppDelegate.m */; };
 		8A911F831E5EB45000AE85B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A911F821E5EB45000AE85B8 /* Assets.xcassets */; };
@@ -24,8 +23,6 @@
 		8A1C24881E600281009D890B /* CFDemoMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDemoMainViewController.m; sourceTree = "<group>"; };
 		8A1C24891E600281009D890B /* CFDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDemoViewController.h; sourceTree = "<group>"; };
 		8A1C248A1E600281009D890B /* CFDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDemoViewController.m; sourceTree = "<group>"; };
-		8A1C248B1E600281009D890B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8A1C248C1E600281009D890B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A911F731E5EB44F00AE85B8 /* CFCycleScrollLabelView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFCycleScrollLabelView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A911F771E5EB44F00AE85B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8A911F791E5EB44F00AE85B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,8 +57,6 @@
 				8A1C24881E600281009D890B /* CFDemoMainViewController.m */,
 				8A1C24891E600281009D890B /* CFDemoViewController.h */,
 				8A1C248A1E600281009D890B /* CFDemoViewController.m */,
-				8A1C248B1E600281009D890B /* ViewController.h */,
-				8A1C248C1E600281009D890B /* ViewController.m */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -192,7 +187,6 @@
 			files = (
 				8A911F7B1E5EB44F00AE85B8 /* AppDelegate.m in Sources */,
 				8A1C248E1E600281009D890B /* CFDemoViewController.m in Sources */,
-				8A1C248F1E600281009D890B /* ViewController.m in Sources */,
 				8A911F901E5EB69C00AE85B8 /* CFCycleScrollLabelView.m in Sources */,
 				8A911F781E5EB44F00AE85B8 /* main.m in Sources */,
 				8A1C248D1E600281009D890B /* CFDemoMainViewController.m in Sources */,

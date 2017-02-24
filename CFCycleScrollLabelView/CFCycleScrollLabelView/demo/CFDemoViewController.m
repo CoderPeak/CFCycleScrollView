@@ -23,19 +23,35 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     
     CFCycleScrollLabelView *cycleScrollLabelView = nil;
-    if ([self.title containsString:@"一"]) {
-        cycleScrollLabelView = [CFCycleScrollLabelView cycleScrollLabelViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66) dataSourceArray:self.dataSource showLabelCount:1];
-        // 水平方向
-        cycleScrollLabelView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    } else if ([self.title containsString:@"二"]) {
-        cycleScrollLabelView = [CFCycleScrollLabelView cycleScrollLabelViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*2) dataSourceArray:self.dataSource showLabelCount:2];
-        // 水平方向
-        cycleScrollLabelView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    if ([self.title containsString:@"一"] ) {
+        if ([self.title containsString:@"竖"]) {
+            
+            cycleScrollLabelView = [CFCycleScrollLabelView cycleScrollLabelViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66) dataSourceArray:self.dataSource showLabelCount:1];
+        } else {
+            cycleScrollLabelView = [CFCycleScrollLabelView cycleScrollLabelViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66) dataSourceArray:self.dataSource showLabelCount:1];
+            // 水平方向
+            cycleScrollLabelView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        }
+    } else if ([self.title containsString:@"二"]){
+        if ([self.title containsString:@"竖"]) {
+            cycleScrollLabelView = [CFCycleScrollLabelView cycleScrollLabelViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*2) dataSourceArray:self.dataSource showLabelCount:2];
+        } else {
+            cycleScrollLabelView = [CFCycleScrollLabelView cycleScrollLabelViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*2) dataSourceArray:self.dataSource showLabelCount:2];
+            // 水平方向
+            cycleScrollLabelView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        }
     } else if ([self.title containsString:@"三"]) {
-        cycleScrollLabelView = [CFCycleScrollLabelView cycleScrollLabelViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*3) dataSourceArray:self.dataSource showLabelCount:3];
-        // 水平方向
-        cycleScrollLabelView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        if ([self.title containsString:@"竖"]) {
+            cycleScrollLabelView = [CFCycleScrollLabelView cycleScrollLabelViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*3) dataSourceArray:self.dataSource showLabelCount:3];
+        } else {
+            cycleScrollLabelView = [CFCycleScrollLabelView cycleScrollLabelViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*3) dataSourceArray:self.dataSource showLabelCount:3];
+            // 水平方向
+            cycleScrollLabelView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        }
     }
+    
+    
+    
     [self.view addSubview:cycleScrollLabelView];
     
 }

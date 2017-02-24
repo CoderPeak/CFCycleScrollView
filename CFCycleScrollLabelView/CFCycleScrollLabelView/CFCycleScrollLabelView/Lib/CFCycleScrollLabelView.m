@@ -30,6 +30,8 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
 /* 当前索引 */
 @property (nonatomic, assign) NSInteger currentIndex;
 
+
+
 @end
 
 @implementation CFCycleScrollLabelView
@@ -39,7 +41,6 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
 {
     if (self = [super initWithFrame:frame]) {
         
-        
         self.dataSourceArray = dataSourceArray;
         self.showLabelCount = showLabelCount;
         self.currentIndex = 0;
@@ -47,7 +48,7 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
         [self setupMainView];
         
         // 添加定时器
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self addTimer];
         });
         
@@ -91,17 +92,30 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
  */
 - (NSIndexPath *)resetIndexPath
 {
-    if (self.currentIndex+1 == self.dataSourceArray.count) {
-        self.currentIndex = -1;
+    NSIndexPath *currentIndexPathReset = nil;
+    if (!self.scrollDirection || self.scrollDirection==UICollectionViewScrollDirectionVertical) {
+        // 竖直方向
+        if (self.currentIndex+1 == self.dataSourceArray.count) {
+            self.currentIndex = -1;
+        }
+        self.currentIndexPath = [NSIndexPath indexPathForItem:self.currentIndex++ inSection:1];
+        // 马上显示回 最中间那组的数据
+        currentIndexPathReset = [NSIndexPath indexPathForItem:self.currentIndexPath.item inSection:1];
+        [self.mainView scrollToItemAtIndexPath:currentIndexPathReset atScrollPosition:UICollectionViewScrollPositionTop animated:NO];
+    } else {
+        // 水平方向
+        self.currentIndexPath = [self.mainView indexPathsForVisibleItems].firstObject;
+        // 马上显示回 最中间那组的数据
+        currentIndexPathReset = [NSIndexPath indexPathForItem:self.currentIndexPath.item inSection:1];
+
+       
+        [self.mainView scrollToItemAtIndexPath:currentIndexPathReset atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
     }
-    self.currentIndexPath = [NSIndexPath indexPathForItem:self.currentIndex++ inSection:1];
-    
-   
-    // 马上显示回 最中间那组的数据
-    NSIndexPath *currentIndexPathReset = [NSIndexPath indexPathForItem:self.currentIndexPath.item inSection:1];
     
     
-    [self.mainView scrollToItemAtIndexPath:currentIndexPathReset atScrollPosition:UICollectionViewScrollPositionTop animated:NO];
+
+    
+    
     return currentIndexPathReset;
 }
 /**
@@ -109,17 +123,38 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
  */
 - (void)nextPage
 {
-    
+ 
+    NSIndexPath *nextIndexPath = nil;
     NSIndexPath *currentIndexPathReset = [self resetIndexPath];
+//    NSLog(@"currentIndexPathReset.item--%zd", currentIndexPathReset.item);
+    if (!self.scrollDirection || self.scrollDirection==UICollectionViewScrollDirectionVertical) {
+        // 竖直方向
+        
+        // 下一个需要展示的位置
+        NSInteger nextItem = currentIndexPathReset.item + 1;
+        nextIndexPath = [NSIndexPath indexPathForItem:nextItem inSection:1];
+        // 通过动画滚动到下一个位置
+        [self.mainView scrollToItemAtIndexPath:nextIndexPath atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+    } else {
+        // 水平方向
+      
+        // 下一个需要展示的位置
+        NSInteger nextItem = currentIndexPathReset.item + self.showLabelCount;
+        
+        NSInteger nextSection = currentIndexPathReset.section;
+        // 水平方向滚动时  最后没法除尽(即最后一组数据缺失  不展示为一组 跳过最后一组滚动 )
+        // 最好是对数据源进行截取操作 使其 整除
+//        if (nextItem >= self.dataSourceArray.count-self.showLabelCount) {
+        // 水平方向滚动时  最后没法除尽(即最后一组数据缺失  也展示为一组 滚动)
+        if (nextItem >= self.dataSourceArray.count) {
+            nextItem = 0;
+            nextSection++;
+        }
+        nextIndexPath = [NSIndexPath indexPathForItem:nextItem inSection:nextSection];
+        // 通过动画滚动到下一个位置
+        [self.mainView scrollToItemAtIndexPath:nextIndexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    }
     
-    // 2.计算出下一个需要展示的位置
-    NSInteger nextItem = currentIndexPathReset.item + 1;
-   
-    
-    NSIndexPath *nextIndexPath = [NSIndexPath indexPathForItem:nextItem inSection:1];
-    
-    // 3.通过动画滚动到下一个位置
-    [self.mainView scrollToItemAtIndexPath:nextIndexPath atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
 }
 #pragma mark - 主视图
 - (void)setupMainView
@@ -149,11 +184,23 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
         CGFloat h = self.cf_height / count;
         _flowLayout.itemSize = CGSizeMake(CFScreenWidth, h);
        
-        _flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        
     }
     return _flowLayout;
 }
 
+#pragma mark - setter
+- (void)setScrollDirection:(UICollectionViewScrollDirection)scrollDirection
+{
+    _scrollDirection = scrollDirection;
+    
+    if (!self.scrollDirection || self.scrollDirection==UICollectionViewScrollDirectionVertical) {
+        // 竖直方向
+        _flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    } else {
+        _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+}
 
 
 

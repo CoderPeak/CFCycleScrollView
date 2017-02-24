@@ -7,25 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1C248D1E600281009D890B /* CFDemoMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C24881E600281009D890B /* CFDemoMainViewController.m */; };
+		8A1C248E1E600281009D890B /* CFDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C248A1E600281009D890B /* CFDemoViewController.m */; };
+		8A1C248F1E600281009D890B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C248C1E600281009D890B /* ViewController.m */; };
 		8A911F781E5EB44F00AE85B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F771E5EB44F00AE85B8 /* main.m */; };
 		8A911F7B1E5EB44F00AE85B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F7A1E5EB44F00AE85B8 /* AppDelegate.m */; };
-		8A911F7E1E5EB44F00AE85B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F7D1E5EB44F00AE85B8 /* ViewController.m */; };
 		8A911F831E5EB45000AE85B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A911F821E5EB45000AE85B8 /* Assets.xcassets */; };
 		8A911F861E5EB45000AE85B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A911F841E5EB45000AE85B8 /* LaunchScreen.storyboard */; };
 		8A911F901E5EB69C00AE85B8 /* CFCycleScrollLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F8F1E5EB69C00AE85B8 /* CFCycleScrollLabelView.m */; };
 		8A911F941E5EB9A400AE85B8 /* UIView+CFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F931E5EB9A400AE85B8 /* UIView+CFFrame.m */; };
 		8A911F971E5EBAE200AE85B8 /* CFCycleScrollLabelViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F961E5EBAE200AE85B8 /* CFCycleScrollLabelViewCell.m */; };
-		8A911F9A1E5ED53700AE85B8 /* CFDemoMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F991E5ED53700AE85B8 /* CFDemoMainViewController.m */; };
-		8A911F9D1E5ED9F900AE85B8 /* CFDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A911F9C1E5ED9F900AE85B8 /* CFDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A1C24871E600281009D890B /* CFDemoMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDemoMainViewController.h; sourceTree = "<group>"; };
+		8A1C24881E600281009D890B /* CFDemoMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDemoMainViewController.m; sourceTree = "<group>"; };
+		8A1C24891E600281009D890B /* CFDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDemoViewController.h; sourceTree = "<group>"; };
+		8A1C248A1E600281009D890B /* CFDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDemoViewController.m; sourceTree = "<group>"; };
+		8A1C248B1E600281009D890B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8A1C248C1E600281009D890B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A911F731E5EB44F00AE85B8 /* CFCycleScrollLabelView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFCycleScrollLabelView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A911F771E5EB44F00AE85B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8A911F791E5EB44F00AE85B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A911F7A1E5EB44F00AE85B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8A911F7C1E5EB44F00AE85B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8A911F7D1E5EB44F00AE85B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A911F821E5EB45000AE85B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A911F851E5EB45000AE85B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A911F871E5EB45000AE85B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,10 +40,6 @@
 		8A911F931E5EB9A400AE85B8 /* UIView+CFFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CFFrame.m"; sourceTree = "<group>"; };
 		8A911F951E5EBAE200AE85B8 /* CFCycleScrollLabelViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFCycleScrollLabelViewCell.h; sourceTree = "<group>"; };
 		8A911F961E5EBAE200AE85B8 /* CFCycleScrollLabelViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFCycleScrollLabelViewCell.m; sourceTree = "<group>"; };
-		8A911F981E5ED53700AE85B8 /* CFDemoMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDemoMainViewController.h; sourceTree = "<group>"; };
-		8A911F991E5ED53700AE85B8 /* CFDemoMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDemoMainViewController.m; sourceTree = "<group>"; };
-		8A911F9B1E5ED9F900AE85B8 /* CFDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDemoViewController.h; sourceTree = "<group>"; };
-		8A911F9C1E5ED9F900AE85B8 /* CFDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +53,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A1C24861E600281009D890B /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				8A1C24871E600281009D890B /* CFDemoMainViewController.h */,
+				8A1C24881E600281009D890B /* CFDemoMainViewController.m */,
+				8A1C24891E600281009D890B /* CFDemoViewController.h */,
+				8A1C248A1E600281009D890B /* CFDemoViewController.m */,
+				8A1C248B1E600281009D890B /* ViewController.h */,
+				8A1C248C1E600281009D890B /* ViewController.m */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
 		8A911F6A1E5EB44F00AE85B8 = {
 			isa = PBXGroup;
 			children = (
@@ -72,15 +85,10 @@
 		8A911F751E5EB44F00AE85B8 /* CFCycleScrollLabelView */ = {
 			isa = PBXGroup;
 			children = (
+				8A1C24861E600281009D890B /* demo */,
 				8A911F8D1E5EB68000AE85B8 /* Lib */,
 				8A911F791E5EB44F00AE85B8 /* AppDelegate.h */,
 				8A911F7A1E5EB44F00AE85B8 /* AppDelegate.m */,
-				8A911F7C1E5EB44F00AE85B8 /* ViewController.h */,
-				8A911F7D1E5EB44F00AE85B8 /* ViewController.m */,
-				8A911F981E5ED53700AE85B8 /* CFDemoMainViewController.h */,
-				8A911F991E5ED53700AE85B8 /* CFDemoMainViewController.m */,
-				8A911F9B1E5ED9F900AE85B8 /* CFDemoViewController.h */,
-				8A911F9C1E5ED9F900AE85B8 /* CFDemoViewController.m */,
 				8A911F821E5EB45000AE85B8 /* Assets.xcassets */,
 				8A911F841E5EB45000AE85B8 /* LaunchScreen.storyboard */,
 				8A911F871E5EB45000AE85B8 /* Info.plist */,
@@ -182,13 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A911F7E1E5EB44F00AE85B8 /* ViewController.m in Sources */,
-				8A911F9A1E5ED53700AE85B8 /* CFDemoMainViewController.m in Sources */,
 				8A911F7B1E5EB44F00AE85B8 /* AppDelegate.m in Sources */,
+				8A1C248E1E600281009D890B /* CFDemoViewController.m in Sources */,
+				8A1C248F1E600281009D890B /* ViewController.m in Sources */,
 				8A911F901E5EB69C00AE85B8 /* CFCycleScrollLabelView.m in Sources */,
 				8A911F781E5EB44F00AE85B8 /* main.m in Sources */,
+				8A1C248D1E600281009D890B /* CFDemoMainViewController.m in Sources */,
 				8A911F971E5EBAE200AE85B8 /* CFCycleScrollLabelViewCell.m in Sources */,
-				8A911F9D1E5ED9F900AE85B8 /* CFDemoViewController.m in Sources */,
 				8A911F941E5EB9A400AE85B8 /* UIView+CFFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +346,7 @@
 				8A911F8C1E5EB45000AE85B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

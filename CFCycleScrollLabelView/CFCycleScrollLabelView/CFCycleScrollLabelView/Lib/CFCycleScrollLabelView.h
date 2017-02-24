@@ -13,6 +13,8 @@
 /* 数据源数组 */
 @property (nonatomic, strong) NSArray *dataSourceArray;
 
+/* 轮播方向 默认-竖直方向 */
+@property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
 
 // showLabelCount
 + (instancetype)cycleScrollLabelViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount;

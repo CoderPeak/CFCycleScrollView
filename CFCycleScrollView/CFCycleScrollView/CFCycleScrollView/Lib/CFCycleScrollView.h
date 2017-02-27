@@ -17,6 +17,6 @@
 @property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
 
 // showLabelCount
-+ (instancetype)cycleScrollLabelViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount;
++ (instancetype)cycleScrollViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount;
 
 @end

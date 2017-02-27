@@ -56,7 +56,7 @@ static NSString *cellIdentify = @"CFCycleScrollViewCell";
     return self;
 }
 
-+ (instancetype)cycleScrollLabelViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount
++ (instancetype)cycleScrollViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount
 {
     
     CFCycleScrollView *view = [[CFCycleScrollView alloc] initWithFrame:frame dataSourceArray:dataSourceArray showLabelCount:showLabelCount];

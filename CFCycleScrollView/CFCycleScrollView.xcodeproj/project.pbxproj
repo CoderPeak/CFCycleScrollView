@@ -12,13 +12,21 @@
 		8A3BD8C61E63BF030079C2B9 /* CFCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3BD8C01E63BF030079C2B9 /* CFCycleScrollView.m */; };
 		8A3BD8C71E63BF030079C2B9 /* CFCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3BD8C21E63BF030079C2B9 /* CFCycleScrollViewCell.m */; };
 		8A3BD8C81E63BF030079C2B9 /* UIView+CFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3BD8C51E63BF030079C2B9 /* UIView+CFFrame.m */; };
-		8A3BD8CF1E63BF250079C2B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD8CC1E63BF250079C2B9 /* Info.plist */; };
 		8A3BD8D11E63BF5A0079C2B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3BD8D01E63BF5A0079C2B9 /* main.m */; };
-		8A3BD8D31E63BF6D0079C2B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD8D21E63BF6D0079C2B9 /* Info.plist */; };
 		8A3BD8D71E63BF900079C2B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3BD8D51E63BF900079C2B9 /* AppDelegate.m */; };
 		8A3BD8D81E63BF900079C2B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD8D61E63BF900079C2B9 /* Assets.xcassets */; };
 		8A3BD8DB1E63C00F0079C2B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD8D91E63C00F0079C2B9 /* LaunchScreen.storyboard */; };
 		8A3BD8DE1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3BD8DD1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.m */; };
+		8A3BD97F1E6420F30079C2B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD97E1E6420F30079C2B9 /* Info.plist */; };
+		8A3BD9E91E6423210079C2B9 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD9E01E6423210079C2B9 /* 01.jpg */; };
+		8A3BD9EA1E6423210079C2B9 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD9E11E6423210079C2B9 /* 02.jpg */; };
+		8A3BD9EB1E6423210079C2B9 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD9E21E6423210079C2B9 /* 03.jpg */; };
+		8A3BD9EC1E6423210079C2B9 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD9E31E6423210079C2B9 /* 04.jpg */; };
+		8A3BD9ED1E6423210079C2B9 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD9E41E6423210079C2B9 /* 05.jpg */; };
+		8A3BD9EE1E6423210079C2B9 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD9E51E6423210079C2B9 /* 06.jpg */; };
+		8A3BD9EF1E6423210079C2B9 /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD9E61E6423210079C2B9 /* 07.jpg */; };
+		8A3BD9F01E6423210079C2B9 /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD9E71E6423210079C2B9 /* 08.jpg */; };
+		8A3BD9F11E6423210079C2B9 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD9E81E6423210079C2B9 /* 00.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,15 +41,23 @@
 		8A3BD8C31E63BF030079C2B9 /* CFMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMacro.h; sourceTree = "<group>"; };
 		8A3BD8C41E63BF030079C2B9 /* UIView+CFFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CFFrame.h"; sourceTree = "<group>"; };
 		8A3BD8C51E63BF030079C2B9 /* UIView+CFFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CFFrame.m"; sourceTree = "<group>"; };
-		8A3BD8CC1E63BF250079C2B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A3BD8D01E63BF5A0079C2B9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CFCycleScrollView/main.m; sourceTree = SOURCE_ROOT; };
-		8A3BD8D21E63BF6D0079C2B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CFCycleScrollView/Info.plist; sourceTree = SOURCE_ROOT; };
 		8A3BD8D41E63BF900079C2B9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CFCycleScrollView/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		8A3BD8D51E63BF900079C2B9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CFCycleScrollView/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		8A3BD8D61E63BF900079C2B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CFCycleScrollView/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		8A3BD8DA1E63C00F0079C2B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CFCycleScrollView/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		8A3BD8DC1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+CFNoCycleRetain.h"; sourceTree = "<group>"; };
 		8A3BD8DD1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+CFNoCycleRetain.m"; sourceTree = "<group>"; };
+		8A3BD97E1E6420F30079C2B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CFCycleScrollView/Info.plist; sourceTree = SOURCE_ROOT; };
+		8A3BD9E01E6423210079C2B9 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		8A3BD9E11E6423210079C2B9 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		8A3BD9E21E6423210079C2B9 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		8A3BD9E31E6423210079C2B9 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		8A3BD9E41E6423210079C2B9 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
+		8A3BD9E51E6423210079C2B9 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
+		8A3BD9E61E6423210079C2B9 /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
+		8A3BD9E71E6423210079C2B9 /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
+		8A3BD9E81E6423210079C2B9 /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
 		8A911F731E5EB44F00AE85B8 /* CFCycleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFCycleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -59,7 +75,7 @@
 		8A3BD8B71E63BEB40079C2B9 /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				8A3BD8CC1E63BF250079C2B9 /* Info.plist */,
+				8A3BD9DF1E6423210079C2B9 /* demo_images */,
 				8A3BD8B81E63BEB40079C2B9 /* CFDemoMainViewController.h */,
 				8A3BD8B91E63BEB40079C2B9 /* CFDemoMainViewController.m */,
 				8A3BD8BA1E63BEB40079C2B9 /* CFDemoViewController.h */,
@@ -86,6 +102,22 @@
 			path = CFCycleScrollView/CFCycleScrollView/Lib;
 			sourceTree = SOURCE_ROOT;
 		};
+		8A3BD9DF1E6423210079C2B9 /* demo_images */ = {
+			isa = PBXGroup;
+			children = (
+				8A3BD9E81E6423210079C2B9 /* 00.jpg */,
+				8A3BD9E01E6423210079C2B9 /* 01.jpg */,
+				8A3BD9E11E6423210079C2B9 /* 02.jpg */,
+				8A3BD9E21E6423210079C2B9 /* 03.jpg */,
+				8A3BD9E31E6423210079C2B9 /* 04.jpg */,
+				8A3BD9E41E6423210079C2B9 /* 05.jpg */,
+				8A3BD9E51E6423210079C2B9 /* 06.jpg */,
+				8A3BD9E61E6423210079C2B9 /* 07.jpg */,
+				8A3BD9E71E6423210079C2B9 /* 08.jpg */,
+			);
+			path = demo_images;
+			sourceTree = "<group>";
+		};
 		8A911F6A1E5EB44F00AE85B8 = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +142,8 @@
 				8A3BD8D41E63BF900079C2B9 /* AppDelegate.h */,
 				8A3BD8D51E63BF900079C2B9 /* AppDelegate.m */,
 				8A3BD8D61E63BF900079C2B9 /* Assets.xcassets */,
+				8A3BD97E1E6420F30079C2B9 /* Info.plist */,
 				8A3BD8D91E63C00F0079C2B9 /* LaunchScreen.storyboard */,
-				8A3BD8D21E63BF6D0079C2B9 /* Info.plist */,
 				8A911F761E5EB44F00AE85B8 /* Supporting Files */,
 			);
 			name = CFCycleScrollView;
@@ -184,10 +216,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A3BD8D31E63BF6D0079C2B9 /* Info.plist in Resources */,
+				8A3BD9EF1E6423210079C2B9 /* 07.jpg in Resources */,
+				8A3BD9EB1E6423210079C2B9 /* 03.jpg in Resources */,
+				8A3BD9F01E6423210079C2B9 /* 08.jpg in Resources */,
+				8A3BD9EA1E6423210079C2B9 /* 02.jpg in Resources */,
+				8A3BD9ED1E6423210079C2B9 /* 05.jpg in Resources */,
+				8A3BD9EE1E6423210079C2B9 /* 06.jpg in Resources */,
+				8A3BD9F11E6423210079C2B9 /* 00.jpg in Resources */,
 				8A3BD8DB1E63C00F0079C2B9 /* LaunchScreen.storyboard in Resources */,
-				8A3BD8CF1E63BF250079C2B9 /* Info.plist in Resources */,
 				8A3BD8D81E63BF900079C2B9 /* Assets.xcassets in Resources */,
+				8A3BD9EC1E6423210079C2B9 /* 04.jpg in Resources */,
+				8A3BD9E91E6423210079C2B9 /* 01.jpg in Resources */,
+				8A3BD97F1E6420F30079C2B9 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

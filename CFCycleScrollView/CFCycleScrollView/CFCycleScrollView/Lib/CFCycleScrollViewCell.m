@@ -14,8 +14,17 @@
 {
     if (self = [super initWithFrame:frame]) {
         [self.contentView addSubview:self.titleLabel];
+        [self.contentView addSubview:self.imageView];
     }
     return self;
+}
+
+- (UIImageView *)imageView
+{
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    }
+    return _imageView;
 }
 
 - (UILabel *)titleLabel

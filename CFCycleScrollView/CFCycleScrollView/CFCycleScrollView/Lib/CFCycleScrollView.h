@@ -19,7 +19,7 @@
 /* 循环时间--默认2s */
 @property (nonatomic, assign) CGFloat timeInterval;
 
-// showLabelCount
-+ (instancetype)cycleScrollViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount;
+// showItemCount
++ (instancetype)cycleScrollViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showItemCount:(NSInteger)showItemCount;
 
 @end

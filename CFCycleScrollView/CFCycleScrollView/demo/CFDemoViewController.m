@@ -26,26 +26,32 @@
     if ([self.title containsString:@"一"] ) {
         if ([self.title containsString:@"竖"]) {
             
-            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66) dataSourceArray:self.dataSource showLabelCount:1];
+//            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66) dataSourceArray:self.dataSource showItemCount:1];
+            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 230) dataSourceArray:self.dataSource showItemCount:1];
         } else {
-            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66) dataSourceArray:self.dataSource showLabelCount:1];
+//            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66) dataSourceArray:self.dataSource showItemCount:1];
+            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 230) dataSourceArray:self.dataSource showItemCount:1];
             // 水平方向
             cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         }
     } else if ([self.title containsString:@"二"]){
         if ([self.title containsString:@"竖"]) {
-            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*2) dataSourceArray:self.dataSource showLabelCount:2];
+//            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*2) dataSourceArray:self.dataSource showItemCount:2];
+            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 100, CFScreenWidth, 230*2) dataSourceArray:self.dataSource showItemCount:2];
         } else {
-            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*2) dataSourceArray:self.dataSource showLabelCount:2];
+//            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*2) dataSourceArray:self.dataSource showItemCount:2];
+            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 100, CFScreenWidth, 230*2) dataSourceArray:self.dataSource showItemCount:2];
             // 水平方向
             cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         }
     } else if ([self.title containsString:@"三"]) {
         if ([self.title containsString:@"竖"]) {
-            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*3) dataSourceArray:self.dataSource showLabelCount:3];
+//            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*3) dataSourceArray:self.dataSource showItemCount:3];
+            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 100, CFScreenWidth, 150*3) dataSourceArray:self.dataSource showItemCount:3];
             cycleScrollView.timeInterval = 3;
         } else {
-            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*3) dataSourceArray:self.dataSource showLabelCount:3];
+//            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*3) dataSourceArray:self.dataSource showItemCount:3];
+            cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 100, CFScreenWidth, 150*3) dataSourceArray:self.dataSource showItemCount:3];
             cycleScrollView.timeInterval = 3;
             // 水平方向
             cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;

@@ -26,7 +26,7 @@ static NSString *cellIdentify = @"CFCycleScrollViewCell";
 @property (nonatomic, strong) NSIndexPath *currentIndexPath;
 
 /* 展示的label行数 */
-@property (nonatomic, assign) NSInteger showLabelCount;
+@property (nonatomic, assign) NSInteger showItemCount;
 
 /* 当前索引 */
 @property (nonatomic, assign) NSInteger currentIndex;
@@ -38,12 +38,12 @@ static NSString *cellIdentify = @"CFCycleScrollViewCell";
 @implementation CFCycleScrollView
 
 #pragma mark - 创建
-- (instancetype)initWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount
+- (instancetype)initWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showItemCount:(NSInteger)showItemCount
 {
     if (self = [super initWithFrame:frame]) {
         
         self.dataSourceArray = dataSourceArray;
-        self.showLabelCount = showLabelCount;
+        self.showItemCount = showItemCount;
         self.currentIndex = 0;
         
         [self setupMainView];
@@ -57,10 +57,10 @@ static NSString *cellIdentify = @"CFCycleScrollViewCell";
     return self;
 }
 
-+ (instancetype)cycleScrollViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount
++ (instancetype)cycleScrollViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showItemCount:(NSInteger)showItemCount
 {
     
-    CFCycleScrollView *view = [[CFCycleScrollView alloc] initWithFrame:frame dataSourceArray:dataSourceArray showLabelCount:showLabelCount];
+    CFCycleScrollView *view = [[CFCycleScrollView alloc] initWithFrame:frame dataSourceArray:dataSourceArray showItemCount:showItemCount];
     
     return view;
 }
@@ -148,12 +148,12 @@ static NSString *cellIdentify = @"CFCycleScrollViewCell";
         // 水平方向
       
         // 下一个需要展示的位置
-        NSInteger nextItem = currentIndexPathReset.item + self.showLabelCount;
+        NSInteger nextItem = currentIndexPathReset.item + self.showItemCount;
         
         NSInteger nextSection = currentIndexPathReset.section;
         // 水平方向滚动时  最后没法除尽(即最后一组数据缺失  不展示为一组 跳过最后一组滚动 )
         // 最好是对数据源进行截取操作 使其 整除
-//        if (nextItem >= self.dataSourceArray.count-self.showLabelCount) {
+//        if (nextItem >= self.dataSourceArray.count-self.showItemCount) {
         // 水平方向滚动时  最后没法除尽(即最后一组数据缺失  也展示为一组 滚动)
         if (nextItem >= self.dataSourceArray.count) {
             nextItem = 0;
@@ -189,7 +189,7 @@ static NSString *cellIdentify = @"CFCycleScrollViewCell";
         _flowLayout = [[UICollectionViewFlowLayout alloc] init];
         _flowLayout.minimumInteritemSpacing = 0;
         _flowLayout.minimumLineSpacing = 0.1;
-        NSInteger count = self.showLabelCount;
+        NSInteger count = self.showItemCount;
         CGFloat h = self.cf_height / count;
         _flowLayout.itemSize = CGSizeMake(CFScreenWidth, h);
        
@@ -230,6 +230,9 @@ static NSString *cellIdentify = @"CFCycleScrollViewCell";
     CFCycleScrollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentify forIndexPath:indexPath];
     
     cell.titleLabel.text = self.dataSourceArray[indexPath.row];
+    
+    // 查看图片轮播demo使用
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"0%zd.jpg", indexPath.row]];
     
     return cell;
 }

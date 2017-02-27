@@ -13,4 +13,6 @@
 // 展示文字
 @property (nonatomic, strong) UILabel *titleLabel;
 
+@property (nonatomic, strong) UIImageView *imageView;
+
 @end

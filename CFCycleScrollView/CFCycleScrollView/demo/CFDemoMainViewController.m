@@ -87,6 +87,9 @@
     [btn21 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn21.backgroundColor = CFRandomColor;
     [self.view addSubview:btn21];
+    
+    
+   
 
 }
 

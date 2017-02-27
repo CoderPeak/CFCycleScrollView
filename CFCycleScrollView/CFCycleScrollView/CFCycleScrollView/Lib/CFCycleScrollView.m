@@ -10,6 +10,7 @@
 #import "CFCycleScrollViewCell.h"
 #import "CFMacro.h"
 #import "UIView+CFFrame.h"
+#import "NSTimer+CFNoCycleRetain.h"
 
 static NSString *cellIdentify = @"CFCycleScrollViewCell";
 
@@ -71,9 +72,17 @@ static NSString *cellIdentify = @"CFCycleScrollViewCell";
 - (void)addTimer
 {
     if (self.dataSourceArray && self.dataSourceArray.count!=0) {
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
-        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-        self.timer = timer;
+        // 循环引用 将导致内存泄漏
+//        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.timeInterval?:2 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
+//        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+//        self.timer = timer;
+        
+        // 解决循环引用导致的内存泄漏
+        WeakSelf
+        _timer = [NSTimer cf_scheduledTimerWithTimeInterval:self.timeInterval?:2 block:^(NSTimer * _Nonnull timer) {
+            StrongSelf
+            [strongSelf nextPage];
+        } repeats:YES];
     }
 }
 

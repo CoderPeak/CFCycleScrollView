@@ -16,6 +16,9 @@
 /* 轮播方向 默认-竖直方向 */
 @property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
 
+/* 循环时间--默认2s */
+@property (nonatomic, assign) CGFloat timeInterval;
+
 // showLabelCount
 + (instancetype)cycleScrollViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount;
 

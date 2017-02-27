@@ -18,6 +18,7 @@
 		8A3BD8D71E63BF900079C2B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3BD8D51E63BF900079C2B9 /* AppDelegate.m */; };
 		8A3BD8D81E63BF900079C2B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD8D61E63BF900079C2B9 /* Assets.xcassets */; };
 		8A3BD8DB1E63C00F0079C2B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3BD8D91E63C00F0079C2B9 /* LaunchScreen.storyboard */; };
+		8A3BD8DE1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3BD8DD1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		8A3BD8D51E63BF900079C2B9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CFCycleScrollView/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		8A3BD8D61E63BF900079C2B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CFCycleScrollView/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		8A3BD8DA1E63C00F0079C2B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CFCycleScrollView/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		8A3BD8DC1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+CFNoCycleRetain.h"; sourceTree = "<group>"; };
+		8A3BD8DD1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+CFNoCycleRetain.m"; sourceTree = "<group>"; };
 		8A911F731E5EB44F00AE85B8 /* CFCycleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFCycleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +79,8 @@
 				8A3BD8C31E63BF030079C2B9 /* CFMacro.h */,
 				8A3BD8C41E63BF030079C2B9 /* UIView+CFFrame.h */,
 				8A3BD8C51E63BF030079C2B9 /* UIView+CFFrame.m */,
+				8A3BD8DC1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.h */,
+				8A3BD8DD1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.m */,
 			);
 			name = Lib;
 			path = CFCycleScrollView/CFCycleScrollView/Lib;
@@ -195,6 +200,7 @@
 			files = (
 				8A3BD8C61E63BF030079C2B9 /* CFCycleScrollView.m in Sources */,
 				8A3BD8C81E63BF030079C2B9 /* UIView+CFFrame.m in Sources */,
+				8A3BD8DE1E640D0E0079C2B9 /* NSTimer+CFNoCycleRetain.m in Sources */,
 				8A3BD8BC1E63BEB40079C2B9 /* CFDemoMainViewController.m in Sources */,
 				8A3BD8C71E63BF030079C2B9 /* CFCycleScrollViewCell.m in Sources */,
 				8A3BD8D11E63BF5A0079C2B9 /* main.m in Sources */,

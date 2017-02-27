@@ -43,8 +43,10 @@
     } else if ([self.title containsString:@"三"]) {
         if ([self.title containsString:@"竖"]) {
             cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*3) dataSourceArray:self.dataSource showLabelCount:3];
+            cycleScrollView.timeInterval = 3;
         } else {
             cycleScrollView = [CFCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 230, CFScreenWidth, 66*3) dataSourceArray:self.dataSource showLabelCount:3];
+            cycleScrollView.timeInterval = 3;
             // 水平方向
             cycleScrollView.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         }

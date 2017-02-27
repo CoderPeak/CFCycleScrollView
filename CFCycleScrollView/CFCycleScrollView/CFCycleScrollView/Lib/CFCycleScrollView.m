@@ -1,19 +1,19 @@
 //
-//  CFCycleScrollLabelView.m
-//  CFCycleScrollLabelView
+//  CFCycleScrollView.m
+//  CFCycleScrollView
 //
 //  Created by Peak on 17/2/23.
 //  Copyright © 2017年 陈峰. All rights reserved.
 //
 
-#import "CFCycleScrollLabelView.h"
-#import "CFCycleScrollLabelViewCell.h"
+#import "CFCycleScrollView.h"
+#import "CFCycleScrollViewCell.h"
 #import "CFMacro.h"
 #import "UIView+CFFrame.h"
 
-static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
+static NSString *cellIdentify = @"CFCycleScrollViewCell";
 
-@interface CFCycleScrollLabelView () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface CFCycleScrollView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 /* 主要显示的view */
 @property (nonatomic, strong) UICollectionView *mainView;
@@ -34,7 +34,7 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
 
 @end
 
-@implementation CFCycleScrollLabelView
+@implementation CFCycleScrollView
 
 #pragma mark - 创建
 - (instancetype)initWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount
@@ -59,7 +59,7 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
 + (instancetype)cycleScrollLabelViewWithFrame:(CGRect)frame dataSourceArray:(NSArray *)dataSourceArray showLabelCount:(NSInteger)showLabelCount
 {
     
-    CFCycleScrollLabelView *view = [[CFCycleScrollLabelView alloc] initWithFrame:frame dataSourceArray:dataSourceArray showLabelCount:showLabelCount];
+    CFCycleScrollView *view = [[CFCycleScrollView alloc] initWithFrame:frame dataSourceArray:dataSourceArray showLabelCount:showLabelCount];
     
     return view;
 }
@@ -161,7 +161,7 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
 {
     UICollectionView *mainView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:self.flowLayout];
   
-    [mainView registerClass:[CFCycleScrollLabelViewCell class] forCellWithReuseIdentifier:cellIdentify];
+    [mainView registerClass:[CFCycleScrollViewCell class] forCellWithReuseIdentifier:cellIdentify];
     mainView.backgroundColor = [UIColor whiteColor];
     mainView.pagingEnabled = YES;
     mainView.showsHorizontalScrollIndicator = NO;
@@ -218,7 +218,7 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CFCycleScrollLabelViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentify forIndexPath:indexPath];
+    CFCycleScrollViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentify forIndexPath:indexPath];
     
     cell.titleLabel.text = self.dataSourceArray[indexPath.row];
     
@@ -248,6 +248,7 @@ static NSString *cellIdentify = @"CFCycleScrollLabelViewCell";
 - (void)dealloc
 {
     [self removeTimer];
+    NSLog(@"%@------dealloc", [self class]);
 }
 
 @end

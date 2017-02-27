@@ -1,15 +1,15 @@
 //
-//  CFCycleScrollLabelViewCell.m
-//  CFCycleScrollLabelView
+//  CFCycleScrollViewCell.m
+//  CFCycleScrollView
 //
 //  Created by Peak on 17/2/23.
 //  Copyright © 2017年 陈峰. All rights reserved.
 //
 
-#import "CFCycleScrollLabelViewCell.h"
+#import "CFCycleScrollViewCell.h"
 #import "CFMacro.h"
 
-@implementation CFCycleScrollLabelViewCell
+@implementation CFCycleScrollViewCell
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {

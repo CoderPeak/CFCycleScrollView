@@ -1,6 +1,6 @@
 //
 //  CFDemoViewController.h
-//  CFCycleScrollLabelView
+//  CFCycleScrollView
 //
 //  Created by Peak on 17/2/23.
 //  Copyright © 2017年 陈峰. All rights reserved.
